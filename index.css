@@ -13,69 +13,84 @@ html {
 
 body{
     
-    min-height: 100vh;
-    margin: 0; padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+min-height: 100vh;
+    
+margin: 0;
+    
+padding: 0;
+    
+display: flex;
+    
+flex-direction: row;
+    
+justify-content: space-between;
 }
 
+@media (1000px <= width <= 1400px) {}
+
 input {
+    appearance:initial;
     -webkit-appearance: none;
     -moz-appearance: none;
-     appearance:initial; 
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #2fb6b8;
-    transition: 0.2s all linear;
-    outline: none;
-    margin-right: 5px;
-    position: relative;
-    top: 4px;
 
+    border: solid #2fb6b8;
+    transition: 0.6s all linear;
+    outline: none;
+    margin: 3vh;
+  
   }
   
   input:checked {
     border: 6px solid rgb(165, 74, 230);
+    /* order: -1; */
   }
   
   label{
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-rows: 1fr 8fr 9fr;
+    color:crimson;transform: translateX(100%);transition: 0.6s;
   }
-  span{display: flex;flex-direction: column-reverse;}
+  span{display: none;flex-direction: column;}
 
   img{
-    width:80vw;
+    width:10vw;
     height:30vh;
+    padding: 5vh;
+    /*visibility: hidden;*/
+   /* display: none;*/
+    order: -1;
   }
   .img_conteiner{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+    row-gap: 2%;
   }
-input:checked ~ span{
-     visibility:visible ;
-}
-input ~ span{
-    visibility: hidden;
-}
 
-
-
-.form-radio-hidden{
-  display: flex;
-  flex-direction: column-reverse;
-  height: 28px;
-  position: relative;
-  align-items: center;
+p
+{
+    display: none;
+    order: 1;
 }
-.form-radio-hidden input{
-  position: absolute;
-  opacity: 0;
-  display: block;
-  height: 0;
-  width: 0;
+ .text{display: flex;}
+
+  input:checked+span {display: block;}
+  input:checked+img {display: block; visibility: visible;}
+  input:checked~p {display: block;}
+  input:checked+label{color: cornflowerblue;}
+  /*input:checked ~ div[class="description"]{
+     display:block;
 }
+input:checked ~ img{
+    display:flex;
+}*/
+
+.img_conteiner.controls.input:checked .img_conteiner.imgs.img{display: block;}
+
 .form-radio-hidden .radio{
   appearance: none;
   -webkit-appearance: none;
