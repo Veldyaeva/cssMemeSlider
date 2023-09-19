@@ -47,23 +47,25 @@ input {
   }
   
   label{
-    display: grid;
-    grid-template-rows: 1fr 8fr 9fr;
-    color:crimson;transform: translateX(100%);transition: 0.6s;
+    display: none;
+    /* grid-template-rows: 1fr 8fr 9fr; */
+    color:crimson;
+    transform: translateX(100%);
+    transition: 0.6s;
+    /* visibility: hidden; */
   }
   span{display: none;flex-direction: column;}
 
   img{
-    width:10vw;
-    height:30vh;
+    height: 100vh;
     padding: 5vh;
     /*visibility: hidden;*/
-   /* display: none;*/
-    order: -1;
+    display: none;
+  
   }
   .img_conteiner{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     /* align-content: center; */
     justify-content: center;
@@ -76,19 +78,22 @@ p
     display: none;
     order: 1;
 }
- .text{display: flex;}
+ .text{/* display: flex; *//* align-items: flex-end; */}
 
-  input:checked+span {display: block;}
+.input:checked +.description {visibility: visible;}
+.img1 {display: block;}
+
+  /*input:checked+span {display: block;}
   input:checked+img {display: block; visibility: visible;}
   input:checked~p {display: block;}
-  input:checked+label{color: cornflowerblue;}
+  input:checked+label{color: cornflowerblue;}*/
   /*input:checked ~ div[class="description"]{
      display:block;
 }
 input:checked ~ img{
     display:flex;
 }*/
-
+/*
 .img_conteiner.controls.input:checked .img_conteiner.imgs.img{display: block;}
 
 .form-radio-hidden .radio{
@@ -146,4 +151,4 @@ input:checked ~ img{
 .form-radio-hidden input:checked + .radio + .text{
   color: #555;
   cursor: default;
-}
+}*/
