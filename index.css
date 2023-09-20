@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'Forum' ;
-    src: url("./asserts/fonts/Forum-Regular.ttf");
-}
-@font-face {
-    font-family: 'Inter' ;
-    src: url("./asserts/fonts/Inter-Regular.ttf");
-}
-
 html {
     scroll-behavior: smooth; 
   }
@@ -29,6 +20,14 @@ justify-content: space-between;
 @media (1000px <= width <= 1400px) {}
 
 input {
+  display: none;
+  }
+  
+
+  
+  label{
+    display: flex;
+    color:crimson;
     appearance:initial;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -39,53 +38,92 @@ input {
     outline: none;
     margin: 3vh;
   
+    /* transform: translateX(100%); */
+    /* transition: 0.6s; */
+    /* flex-direction: row-reverse; */
+    /* display: none; */
+    /* flex-wrap: wrap; */
   }
-  
-  input:checked {
-    border: 6px solid rgb(165, 74, 230);
-    /* order: -1; */
-  }
-  
-  label{
-    display: none;
-    /* grid-template-rows: 1fr 8fr 9fr; */
-    color:crimson;
-    transform: translateX(100%);
-    transition: 0.6s;
-    /* visibility: hidden; */
-  }
-  span{display: none;flex-direction: column;}
+  /*span{flex-direction: column;display: none;}*/
 
   img{
     height: 100vh;
     padding: 5vh;
-    /*visibility: hidden;*/
-    display: none;
-  
+   
   }
   .img_conteiner{
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    row-gap: 2%;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-p
-{
-    display: none;
-    order: 1;
+.imgs{
+  display: flex;
+  transition: transform 0.3s linear;
+  align-items: center;
+  overflow: hidden;
 }
- .text{/* display: flex; *//* align-items: flex-end; */}
+/*input:nth-child(1):checked ~ label:nth-child(1) {display: block;}*/
 
-.input:checked +.description {visibility: visible;}
-.img1 {display: block;}
+.text span{display: block;}
 
-  /*input:checked+span {display: block;}
+#input1:checked ~ .text_lbl .lbl .img1,
+#input2:checked ~ .text_lbl .lbl .img2,
+#input3:checked ~ .text_lbl .lbl .img3,
+#input4:checked ~ .text_lbl .lbl .img4,
+#input5:checked ~ .text_lbl .lbl .img5,
+#input6:checked ~ .text_lbl .lbl .img6,
+#input7:checked ~ .text_lbl .lbl .img7 {  border: 6px solid rgb(165, 74, 230);}
+
+#input1:checked ~ .text_lbl .text .img1,
+#input2:checked ~ .text_lbl .text .img2,
+#input3:checked ~ .text_lbl .text .img3,
+#input4:checked ~ .text_lbl .text .img4,
+#input5:checked ~ .text_lbl .text .img5,
+#input6:checked ~ .text_lbl .text .img6,
+#input7:checked ~ .text_lbl .text .img7 {  border: 6px solid rgb(165, 74, 230);}
+
+#input1:checked ~ .imgs .img1,
+#input2:checked ~ .imgs .img2,
+#input3:checked ~ .imgs .img3,
+#input4:checked ~ .imgs .img4,
+#input5:checked ~ .imgs .img5,
+#input6:checked ~ .imgs .img6,
+#input7:checked ~ .imgs .img7 {  border: 6px solid rgb(165, 74, 230);}
+
+
+#input1:checked ~ .span .img1  {transform: translateX(0);}
+#input2:checked ~ .span.img2 {transform: translateX(100%);}
+
+/*.ctrl_text:has(#input1:checked) ~ .imgs:has(.img1) {display: block;}
+.ctrl_text:has(#input2:checked) ~ .imgs:has(.img2) {display: block;}
+.ctrl_text:has(#input3:checked) ~ .imgs:has(.img3) {display: block;}
+.ctrl_text:has(#input4:checked) ~ .imgs:has(.img4) {display: block;}
+.ctrl_text:has(#input5:checked) ~ .imgs:has(.img5) {display: block;}
+.ctrl_text:has(#input6:checked) ~ .imgs:has(.img6) {display: block;}
+.ctrl_text:has(#input7:checked) ~ .imgs:has(.img7) {display: block;}
+/*#input2:checked+.img2{transform: translateX(0);}
+#input3:checked>.img3{transform: translateX(0);}
+#input4:checked .img4{transform: translateX(0);}
+#input5:checked .img5{transform: translateX(0);}
+#input6:checked .img6{transform: translateX(0);}
+#input7:checked .img7{transform: translateX(0);}*/
+
+/*#img1 {z-index: 1;}
+#img2 {z-index: 2;}
+#img3 {z-index: 3;}
+#img4 {z-index: 4;}
+#img5 {z-index: 5;}
+#img6 {z-index: 6;}
+#img7 {z-index: 7;}*/
+
+/*.img1 {display: block;}
+
+  input:checked+label.description {display: block;}
   input:checked+img {display: block; visibility: visible;}
-  input:checked~p {display: block;}
+  /*input:checked~p {display: block;}
   input:checked+label{color: cornflowerblue;}*/
   /*input:checked ~ div[class="description"]{
      display:block;
