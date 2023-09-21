@@ -65,7 +65,7 @@ input {display: none;}
 .text{
   display: flex;
   overflow: hidden;
-  font-size: 3rem;
+  font-size: 5rem;
   height: calc(100%/8);
   /* overflow-y: hidden; */
   height: calc(100%*8);
