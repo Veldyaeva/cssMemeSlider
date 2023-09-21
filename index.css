@@ -57,10 +57,10 @@ input {
     align-items: center;
 }
 
-.text{/* transition:border 5s linear; *//* display: flex; */}
+.text{display: flex;width: calc(100%/7);overflow: hidden;}
 span{
   transition: border 2s ease;
-  border: solid #2fb6b8 1.5rem;
+  border: solid #2fb6b8 1.5rem;transition: margin-left 1s linear;
 }
   
   .lbl{
@@ -90,13 +90,6 @@ label{
 #input6:checked ~ .text_lbl .lbl .img6,
 #input7:checked ~ .text_lbl .lbl .img7 {  border: 1.5rem solid rgb(165, 74, 230);}
 
-#input1:checked ~ .text_lbl .text .img1,
-#input2:checked ~ .text_lbl .text .img2,
-#input3:checked ~ .text_lbl .text .img3,
-#input4:checked ~ .text_lbl .text .img4,
-#input5:checked ~ .text_lbl .text .img5,
-#input6:checked ~ .text_lbl .text .img6,
-#input7:checked ~ .text_lbl .text .img7 {  border: 1.5rem solid rgb(165, 74, 230);}
 
 
 #input1:checked ~ .imgs .img1{ margin-left:0%;}
@@ -108,13 +101,13 @@ label{
 #input7:checked ~ .imgs .img1{ margin-left:-600%;}
 
   /*transition: border 3s;/*transform: translateX(-200%);*/
-/*#input1:checked ~ .imgs
-#input2:checked ~ .imgs
-#input3:checked ~ .imgs
-#input4:checked ~ .imgs
-#input5:checked ~ .imgs
-#input6:checked ~ .imgs
-#input7:checked ~ .imgs*/
+#input1:checked ~ .text_lbl .text span.img1{ margin-left:calc(0%)}
+#input2:checked ~ .text_lbl .text span.img1{ margin-left:calc(-100%/7);}
+#input3:checked ~ .text_lbl .text span.img1{ margin-left:calc(-200%/7);}
+#input4:checked ~ .text_lbl .text span.img1{ margin-left:calc(-300%/7);}
+#input5:checked ~ .text_lbl .text span.img1{ margin-left:calc(-400%/7);}
+#input6:checked ~ .text_lbl .text span.img1{ margin-left:calc(-500%/7);}
+#input7:checked ~ .text_lbl .text span.img1{ margin-left:calc(-600%/7);}
 
 label.img1:hover {background: 1.5 rem solid rgb(165, 74, 230);}
 label.img2:hover{border: 1.5 rem solid rgb(165, 74, 230);}
@@ -125,10 +118,4 @@ label.img2:hover{border: 1.5 rem solid rgb(165, 74, 230);}
 .lbl+ .img6:hover{border: 1.5 rem solid rgb(165, 74, 230);}
 .lbl+ .img7:hover {border: 1.5 rem solid rgb(165, 74, 230);}
 
-/*#input1:checked ~ .imgs,
-#input2:checked ~ .imgs,
-#input3:checked ~ .imgs,
-#input4:checked ~ .imgs,
-#input5:checked ~ .imgs,
-#input6:checked ~ .imgs,
-#input7:checked ~ .imgs {}*/
+
