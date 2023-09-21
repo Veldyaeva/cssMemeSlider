@@ -109,13 +109,13 @@ label{
 #input6:checked ~ .text_lbl .text span.img1{ margin-left:calc(-500%/7);}
 #input7:checked ~ .text_lbl .text span.img1{ margin-left:calc(-600%/7);}
 
-label.img1:hover {background: 1.5 rem solid rgb(165, 74, 230);}
-label.img2:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl  .img3:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl> .img4:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl> .img4:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl.img5:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl+ .img6:hover{border: 1.5 rem solid rgb(165, 74, 230);}
-.lbl+ .img7:hover {border: 1.5 rem solid rgb(165, 74, 230);}
+label.img1:hover {cursor: pointer; transform: scale(10%);}
+label.img2:hover{cursor: pointer;transform: scale(10%);}
+label.img3:hover{cursor: pointer;transform: scale(10%);}
+label.img4:hover{cursor: pointer;transform: scale(10%);}
+label.img4:hover{cursor: pointer;transform: scale(10%);}
+label.img5:hover{cursor: pointer;transform: scale(10%);}
+label.img6:hover{cursor: pointer;transform: scale(10%);}
+label.img7:hover{cursor: pointer;transform: scale(10%);}
 
 
