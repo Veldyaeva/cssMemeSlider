@@ -17,8 +17,14 @@ flex-direction: row;
 justify-content: space-between;
 }
 
-@media (1000px <= width <= 1400px) {}
 
+  .text_lbl{
+     display: flex; 
+     flex-direction: row; 
+     justify-content: space-between; 
+     width: 100%; 
+     align-items: center; 
+}
 .img_conteiner{
   display: flex;
   flex-direction: column;
@@ -49,18 +55,14 @@ input {
       transition: margin-left 1s;
       /* border: blanchedalmond; */
       }
-  .text_lbl{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
+
 
 .text{display: flex;width: calc(100%/7);overflow: hidden;}
 span{
   transition: border 2s ease;
-  border: solid #2fb6b8 1.5rem;transition: margin-left 1s linear;
+  /* border: solid #2fb6b8 1.5rem; */
+  transition: margin-left 1s linear;
+  white-space: nowrap;
 }
   
   .lbl{
@@ -100,7 +102,6 @@ label{
 #input6:checked ~ .imgs .img1{ margin-left:-500%;}
 #input7:checked ~ .imgs .img1{ margin-left:-600%;}
 
-  /*transition: border 3s;/*transform: translateX(-200%);*/
 #input1:checked ~ .text_lbl .text span.img1{ margin-left:calc(0%)}
 #input2:checked ~ .text_lbl .text span.img1{ margin-left:calc(-100%/7);}
 #input3:checked ~ .text_lbl .text span.img1{ margin-left:calc(-200%/7);}
@@ -109,13 +110,27 @@ label{
 #input6:checked ~ .text_lbl .text span.img1{ margin-left:calc(-500%/7);}
 #input7:checked ~ .text_lbl .text span.img1{ margin-left:calc(-600%/7);}
 
-label.img1:hover {cursor: pointer; transform: scale(10%);}
-label.img2:hover{cursor: pointer;transform: scale(10%);}
-label.img3:hover{cursor: pointer;transform: scale(10%);}
-label.img4:hover{cursor: pointer;transform: scale(10%);}
-label.img4:hover{cursor: pointer;transform: scale(10%);}
-label.img5:hover{cursor: pointer;transform: scale(10%);}
-label.img6:hover{cursor: pointer;transform: scale(10%);}
-label.img7:hover{cursor: pointer;transform: scale(10%);}
+label.img1:hover{cursor: pointer;transform: scale(150%);}
+label.img2:hover{cursor: pointer;transform: scale(150%);}
+label.img3:hover{cursor: pointer;transform: scale(150%);}
+label.img4:hover{cursor: pointer;transform: scale(150%);}
+label.img4:hover{cursor: pointer;transform: scale(150%);}
+label.img5:hover{cursor: pointer;transform: scale(150%);}
+label.img6:hover{cursor: pointer;transform: scale(150%);}
+label.img7:hover{cursor: pointer;transform: scale(150%);}
 
 
+@media (max-width:1499px) {
+  .text_lbl {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    display: flex;
+  }
+  .text {
+    text-align: center;
+  }
+  .lbl {
+    margin: 30px 0;
+  }
+  }
