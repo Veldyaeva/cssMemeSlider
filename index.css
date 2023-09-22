@@ -128,7 +128,7 @@ label.img8:hover{cursor: pointer;transform: scale(150%);}
 
 @media (max-width:500px) {
   .text_lbl {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     margin-top: 0;
     display: flex;
